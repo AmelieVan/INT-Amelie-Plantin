@@ -1,0 +1,136 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>EX4: Draw Me Like</title>
+</head>
+
+<body>
+  <h1>
+    Draw me like...
+  </h1>
+
+  <div class="canvas__wrapper">
+    <canvas></canvas>
+  </div>
+  <div class="color__wrapper">
+    <input type="color" class="colorpicker" name="stroke" value="#e69265">
+    <button class="reset">Reset</button>
+  </div>
+  <div class="cat__wrapper">
+    <img class="cat" src="./assets/cat.jpeg" alt="cat">
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unscramble Puzzle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .scrambled-letters {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .letter {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .drop-zone {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .drop-box {
+      width: 50px;
+      height: 50px;
+      border: 2px dashed #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .story {
+      margin-top: 20px;
+    }
+
+    /* @media (max-width: 600px) {
+  .scrambled-letters, .drop-zone {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .letter, .drop-box {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  body {
+    padding: 10px;
+  }
+} */
+  </style>
+</head>
+
+<body>
+  <h1>Unscramble the Motto</h1>
+  <div class="scrambled-letters">
+    <div class="letter" draggable="true" data-letter="L">L</div>
+    <div class="letter" draggable="true" data-letter="A">A</div>
+    <div class="letter" draggable="true" data-letter="B">B</div>
+    <div class="letter" draggable="true" data-letter="O">O</div>
+    <div class="letter" draggable="true" data-letter="R">R</div>
+  </div>
+
+  <div class="drop-zone">
+    <div class="drop-box" data-position="0"></div>
+    <div class="drop-box" data-position="1"></div>
+    <div class="drop-box" data-position="2"></div>
+    <div class="drop-box" data-position="3"></div>
+    <div class="drop-box" data-position="4"></div>
+  </div>
+
+  <div class="story hidden">
+    <h2>Congratulations!</h2>
+    <p>You unscrambled the motto and unlocked the next part of the story.</p>
+  </div>
+
+</body>
+
+</html>
