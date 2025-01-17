@@ -13,10 +13,31 @@
   <link rel="stylesheet" href="./src/css/reset.css">
   <link rel="stylesheet" href="./src/css/style.css">
   <title>The Forbidden Ink</title>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔏</text></svg>">
+
 </head>
 
 <body>
   <header>
-    <img src="./src/assets/mpm-logo.png" alt="museum logo" width="2175" height="2052">
+    <a href="index.html">
+      <img class="logo--mobile" src="./src/assets/mpm-logo.png" alt="museum logo" width="2175" height="2052">
+    </a>
+    <div class="off-screen-menu">
+      <ul>
+        <li><a href="#">Chapter 1</a></li>
+        <li><a href="#">Chapter 2</a></li>
+        <li><a href="#">Chapter 3</a></li>
+        <li><a href="#">Chapter 4</a></li>
+      </ul>
+    </div>
+    <nav class="ham-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </nav>
+    <img src="./src/assets/mobile-header.png" alt="hero image of the website" width="393" height="365">
+    <button type="button">Explore more ⌄</button>
   </header>
+  <script src="./src/js/main.js"></script>
 </body>
