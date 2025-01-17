@@ -19,25 +19,29 @@
 </head>
 
 <body>
-  <header>
-    <a href="index.html">
-      <img class="logo--mobile" src="./src/assets/mpm-logo.png" alt="museum logo" width="2175" height="2052">
+  <header class="header">
+    <a class="header__logo" href="index.html">
+      <img class="header__logo-image" src="./src/assets/mpm-logo.png" alt="museum logo" width="2175" height="2052">
     </a>
-    <div class="off-screen-menu">
-      <ul>
-        <li><a href="#">Chapter 1</a></li>
-        <li><a href="#">Chapter 2</a></li>
-        <li><a href="#">Chapter 3</a></li>
-        <li><a href="#">Chapter 4</a></li>
+    <div class="header__menu off-screen-menu">
+      <ul class="header__menu-list">
+        <li class="header__menu-item"><a class="header__menu-link" href="#">Chapter 1</a></li>
+        <li class="header__menu-item"><a class="header__menu-link" href="#">Chapter 2</a></li>
+        <li class="header__menu-item"><a class="header__menu-link" href="#">Chapter 3</a></li>
+        <li class="header__menu-item"><a class="header__menu-link" href="#">Chapter 4</a></li>
       </ul>
     </div>
-    <nav class="ham-menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </nav>
-    <img src="./src/assets/mobile-header.png" alt="hero image of the website" width="393" height="365">
-    <button type="button">Explore more ⌄</button>
+  <nav class="header__ham-menu ham-menu">
+    <span class="ham-menu__bar"></span>
+    <span class="ham-menu__bar"></span>
+    <span class="ham-menu__bar"></span>
+  </nav>
+    <img 
+    class="header__hero-image"
+    src="./src/assets/mobile-header.png" alt="hero image of the website" width="393" height="365">
+    <div class="button__container">
+    <button class="button__primary" type="button">Explore more ⌄</button>
+    </div>
   </header>
   <script src="./src/js/main.js"></script>
 </body>
