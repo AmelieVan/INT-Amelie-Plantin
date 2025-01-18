@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *,
@@ -64,7 +65,7 @@ body {
 
 .header__menu {
   background-color: var(--colour-bg-red);
-  height: 100%;
+  height: 100vh;
   width: 100%;
   position: fixed;
   top: 0;
@@ -107,19 +108,19 @@ body {
   height: 0.2rem;
   width: 100%;
   position: absolute;
-  top: -6.5rem;
+  top: -8rem;
   bottom: 3rem;
-  right: -20rem;
+  right: -18rem;
   transform: translate(-50%, -50%);
   transition: .3s ease;
 }
 
 .header__ham-menu span:nth-child(1) {
-  top: -5.5rem;
+  top: -7rem;
 }
 
 .header__ham-menu span:nth-child(3) {
-  top: -4.5rem;
+  top: -6rem;
 }
 
 .header__ham-menu.active span:nth-child(1) {
@@ -138,6 +139,46 @@ body {
   background-color: var(--colour-primary);
 }
 
+.header__hero-container {
+  display: grid;
+  grid-template-columns: repeat(3, 9rem);
+  grid-template-rows: repeat(4, 6rem);
+}
+
+.header__hero-title {
+  width: 100vw;
+  height: auto;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.header__hero-plantin {
+  width: 14rem;
+  height: auto;
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: center;
+}
+
+.header__hero-quil {
+  width: 3rem;
+  height: auto;
+  justify-self: end;
+  grid-column: 1;
+  grid-row: 4;
+  margin-top: -2.5rem;
+  margin-right: -2rem;
+}
+
+.header__hero-banner {
+  width: 26rem;
+  height: auto;
+  grid-column: 1;
+  grid-row: 3;
+  z-index: -1;
+  align-self: start;
+}
+
 button {
   background-color: transparent;
   border-color: var(--colour-highlight-orange);
@@ -154,15 +195,60 @@ button {
   font-size: 1.875rem;
 }
 
-.button__primary{
-  margin-top: var(--spacing-60);
-  margin-right: var(--spacing-30)
-}
-
 .button__container {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
-  height: 40vh;
+  height: 20vh;
 }
 
+.chapter {
+  display: grid;
+  grid-template-columns: 5rem 20rem;
+  grid-template-rows: 3rem 20rem 20rem 4rem 6rem;
+}
+
+.chapter__number {
+  font-size: var(--font-size-number);
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.chapter__title {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.chapter__divider--one {
+  grid-column: 1;
+  grid-row: 2;
+  height: 25rem;
+  width: 0.1rem;
+  background-color: var(--colour-font-black);
+  margin: 1rem;
+}
+
+.chapter__divider--two {
+  grid-column: 1;
+  grid-row: 3;
+  height: 13rem;
+  width: 0.1rem;
+  background-color: var(--colour-font-black);
+  margin: 1rem;
+}
+
+.chapter__content--two {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.chapter__title--interaction {
+  grid-column: 1 / 3;
+  grid-row: 4;
+  font-size: var(--font-size-desktop-h2);
+}
+
+.chapter__content--three {
+  grid-column: 1 / 3;
+  grid-row: 5;
+}
