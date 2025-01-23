@@ -1,4 +1,6 @@
 { 
+  gsap.registerPlugin(ScrollTrigger);
+  
   const handleHamClick = () => {
     $hamMenu.classList.toggle('active');
     $offScreenMenu.classList.toggle('active');
