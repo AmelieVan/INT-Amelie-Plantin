@@ -5,8 +5,8 @@
     let drawing = false;
 
     const init = () => {
-        $canvas.width = 400;
-        $canvas.height = 480;
+        $canvas.width = 300;
+        $canvas.height = 300;
 
         context.strokeStyle = '#000000';
         context.lineWidth = 6;

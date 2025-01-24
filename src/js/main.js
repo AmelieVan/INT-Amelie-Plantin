@@ -1,6 +1,6 @@
-{ 
+{
   gsap.registerPlugin(ScrollTrigger);
-  
+
   const handleHamClick = () => {
     $hamMenu.classList.toggle('active');
     $offScreenMenu.classList.toggle('active');
@@ -54,6 +54,17 @@
   };
 
   const init = () => {
+  //   gsap.to(".header__ink-drop", {
+  //     scale: 100,
+  //     y: "300vh",
+  //     scrollTrigger: {
+  //       trigger: ".chapter--one", 
+  //       start: "top top", // Start when the section enters the viewport
+  //       end: "bottom top", // End when the section exits the viewport
+  //       scrub: true,
+  //       markers: true, 
+  //     },
+  //   });
   };
 
   init();

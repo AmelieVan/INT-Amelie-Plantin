@@ -30,17 +30,102 @@
         <li class="header__menu-item"><a class="header__menu-link" href="#chapter-4">Chapter 4</a></li>
       </ul>
     </div>
+
     <nav class="header__ham-menu ham-menu">
       <span class="ham-menu__bar"></span>
       <span class="ham-menu__bar"></span>
       <span class="ham-menu__bar"></span>
     </nav>
     <div class="header__hero-container">
-      <img class="header__hero-title" src="./src/assets/hero-title.png" alt="hero title" width="880" height="486">
-      <img class="header__hero-plantin" src="./src/assets/hero-plantin.png" alt="plantin hero image" width="566"
-        height="618">
-      <img class="header__hero-quil" src="./src/assets/hero-quil.png" alt="plantin's quil" width="154" height="205">
-      <img class="header__hero-banner" src="./src/assets/hero-banner.png" alt="hero banner" width="1900" height="1080">
+
+      <picture class="header__hero-title">
+        <source sizes="(min-width: 1520px) 640px, (min-width: 340px) calc(44.83vw - 32px), calc(-2645vw + 8575px)"
+          srcset="
+                  ./src/assets/hero-title-325.avif 325w,
+                  ./src/assets/hero-title-430.avif 430w,
+                  ./src/assets/hero-title-530.avif 530w" type="image/avif">
+
+        <source sizes="(min-width: 1520px) 640px, (min-width: 340px) calc(44.83vw - 32px), calc(-2645vw + 8575px)"
+          srcset="
+                  ./src/assets/hero-title-325.jpeg 325w,
+                  ./src/assets/hero-title-430.jpeg 430w,
+                  ./src/assets/hero-title-530.jpeg 530w" type="image/jpeg">
+
+        <img class="header__hero-title"
+          sizes="(min-width: 1520px) 640px, (min-width: 340px) calc(44.83vw - 32px), calc(-2645vw + 8575px)" srcset="
+                  ./src/assets/hero-title-325.png 325w,
+                  ./src/assets/hero-title-430.png 430w,
+                  ./src/assets/hero-title-530.png 530w" src="./src/assets/hero-title-325.png" alt="hero title">
+      </picture>
+
+      <picture class="header__hero-plantin">
+        <source sizes="(min-width: 1040px) 560px, (min-width: 600px) 400px, 224px" srcset="
+            ./src/assets/hero-plantin-325.avif 325w,
+            ./src/assets/hero-plantin-430.avif 430w,
+            ./src/assets/hero-plantin-530.avif 530w,
+            ./src/assets/hero-plantin-700.avif 700w" type="image/avif">
+
+        <source sizes="(min-width: 1040px) 560px, (min-width: 600px) 400px, 224px" srcset="
+            ./src/assets/hero-plantin-700.jpeg 700w,
+            ./src/assets/hero-plantin-530.jpeg 530w,
+            ./src/assets/hero-plantin-430.jpeg 430w,
+            ./src/assets/hero-plantin-325.jpeg 325w" type="image/jpeg">
+
+        <img class="header__hero-plantin" sizes="(min-width: 1040px) 560px, (min-width: 600px) 400px, 224px" srcset="
+            ./src/assets/hero-plantin-325.png 325w,
+            ./src/assets/hero-plantin-430.png 430w,
+            ./src/assets/hero-plantin-530.png 530w,
+            ./src/assets/hero-plantin-700.png 700w" src="./src/assets/hero-plantin-325.png"
+          alt="hero plantin illustration">
+      </picture>
+
+      <picture class="header__hero-quil">
+        <source sizes="(min-width: 1040px) 128px, (min-width: 600px) 104px, 48px" srcset="
+            ./src/assets/hero-quil-325.avif 325w,
+            ./src/assets/hero-quil-430.avif 430w,
+            ./src/assets/hero-quil-530.avif 530w,
+            ./src/assets/hero-quil-700.avif 700w" type="image/avif">
+
+        <source sizes="(min-width: 1040px) 128px, (min-width: 600px) 104px, 48px" srcset="
+            ./src/assets/hero-quil-325.jpeg 325w,
+            ./src/assets/hero-quil-430.jpeg 430w,
+            ./src/assets/hero-quil-530.jpeg 530w,
+            ./src/assets/hero-quil-700.jpeg 700w" type="image/jpeg">
+
+        <img class="header__hero-quil" sizes="(min-width: 1040px) 128px, (min-width: 600px) 104px, 48px" srcset="
+            ./src/assets/hero-quil-325.png 325w,
+            ./src/assets/hero-quil-430.png 430w,
+            ./src/assets/hero-quil-530.png 530w,
+            ./src/assets/hero-quil-700.png 700w" src="./src/assets/hero-quil-325.png" alt="plantin's quil">
+      </picture>
+
+      <picture class="header__hero-banner">
+        <source sizes="(min-width: 1040px) 1120px, (min-width: 600px) 736px, 416px" srcset="
+              ./src/assets/hero-banner-416.avif 416w,
+              ./src/assets/hero-banner-832.avif 832w,
+              ./src/assets/hero-banner-1248.avif 1248w,
+              ./src/assets/hero-banner-1472.avif 1472w,
+              ./src/assets/hero-banner-1780.avif 1780w,
+              ./src/assets/hero-banner-2048.avif 2048w" type="image/avif">
+
+        <source sizes="(min-width: 1040px) 1120px, (min-width: 600px) 736px, 416px" srcset="
+              ./src/assets/hero-banner-416.jpeg 416w,
+              ./src/assets/hero-banner-832.jpeg 832w,
+              ./src/assets/hero-banner-1248.jpeg 1248w,
+              ./src/assets/hero-banner-1472.jpeg 1472w,
+              ./src/assets/hero-banner-1780.jpeg 1780w,
+              ./src/assets/hero-banner-2048.jpeg 2048w" type="image/jpeg">
+
+        <img class="header__hero-banner" sizes="(min-width: 1040px) 1120px, (min-width: 600px) 736px, 416px" srcset="
+              ./src/assets/hero-banner-416.png 416w,
+              ./src/assets/hero-banner-832.png 832w,
+              ./src/assets/hero-banner-1248.png 1248w,
+              ./src/assets/hero-banner-1472.png 1472w,
+              ./src/assets/hero-banner-1780.png 1780w,
+              ./src/assets/hero-banner-2048.png 2048w" src="./src/assets/hero-banner-416.png" alt="hero banner">
+      </picture>
+
+
     </div>
     <div class="button__container">
       <a class="button__primary" href="#chapter-1"><button class="button__primary" type="button">Explore more
@@ -49,6 +134,7 @@
   </header>
 
   <main>
+    <div class="header__ink-drop"></div>
     <section class="chapter chapter--one" id="chapter-1">
       <span class="chapter__number">01</span>
       <h1 class="chapter__title chapter__title--one">Christophe Plantin</h1>
@@ -78,9 +164,28 @@
       <div class="canvas__wrapper">
         <canvas></canvas>
       </div>
-      <img class="chapter__interaction--image" src="./src/assets/chapter1-finger.png" alt="woodcut index finger"
-        width="235" height="209">
+      <picture class="chapter__interaction--image">
+        <source sizes="128px" srcset="
+            ./src/assets/chapter1-finger-325.avif 325w,
+            ./src/assets/chapter1-finger-430.avif 430w,
+            ./src/assets/chapter1-finger-530.avif 530w" type="image/avif">
+
+        <source sizes="128px" srcset="
+            ./src/assets/chapter1-finger-325.jpeg 325w,
+            ./src/assets/chapter1-finger-430.jpeg 430w,
+            ./src/assets/chapter1-finger-530.jpeg 530w" type="image/jpeg">
+
+        <img class="chapter__interaction--image" sizes="128px" srcset="
+            ./src/assets/chapter1-finger-325.png 325w,
+            ./src/assets/chapter1-finger-430.png 430w,
+            ./src/assets/chapter1-finger-530.png 530w" src="./src/assets/chapter1-finger-325.png"
+          alt="woodcut index finger">
+      </picture>
+
+
     </section>
+
+    <div class="chapter__bridge"></div>
 
     <section class="chapter chapter--two" id="chapter-2">
       <span class="chapter__number chapter__number--two">02</span>
@@ -94,7 +199,8 @@
           Turning one book into a bridge
           between worlds.</strong></p>
 
-      <p class="chapter__content chapter__content--career-1">Plantin’s early career showed his knack for navigating risky
+      <p class="chapter__content chapter__content--career-1">Plantin’s early career showed his knack for navigating
+        risky
         waters. </p>
 
       <p class="chapter__content chapter__content--career-2">
@@ -201,8 +307,29 @@
             ornate Catholic missals <strong class="highlight-red"> bound for a cathedral</strong>.
           </p>
           <span class="chapter-three__caption">Written under Jeanne Rivière’s nephew</span>
-          <img class="chapter-three__image-1" src="./src/assets/chapter3-interactive1.jpg"
-            alt="pamphlet written under Jeanne Rivière’s nephew" width="1107" height="2202">
+
+
+          <picture class="chapter-three__image-1">
+            <source sizes="(min-width: 600px) 288px, 240px"
+              srcset="
+                      ./src/assets/chapter3-interactive1-325.avif 325w,
+                      ./src/assets/chapter3-interactive1-430.avif 430w,
+                      ./src/assets/chapter3-interactive1-530.avif 530w" type="image/avif">
+
+            <source sizes="(min-width: 600px) 288px, 240px"
+              srcset="
+                      ./src/assets/chapter3-interactive1-530.jpeg 530w,
+                      ./src/assets/chapter3-interactive1-430.jpeg 430w,
+                      ./src/assets/chapter3-interactive1-325.jpeg 325w" type="image/jpeg">
+
+            <img class="chapter-three__image-1"
+              sizes="(min-width: 600px) 288px, 240px" srcset="
+                      ./src/assets/chapter3-interactive1-325.png 325w,
+                      ./src/assets/chapter3-interactive1-430.png 430w,
+                      ./src/assets/chapter3-interactive1-530.png 530w" src="./src/assets/chapter3-interactive1-325.png"
+              alt="pamphlet written under Jeanne Rivière’s nephew">
+          </picture>
+
         </div>
 
         <!-- Second Item -->
@@ -212,8 +339,26 @@
               works bore others’ names, while his appeared only on safe, approved texts. </strong> This web of
             misdirection kept him afloat—though not without danger.</p>
           <span class="chapter-three__caption-2">Edited report is used as propaganda</span>
-          <img class="chapter-three__image-2" src="./src/assets/chapter3-interactive2.jpeg"
-            alt="Edited report is used as propaganda" width="1025" height="1664">
+
+          <picture class="chapter-three__image-2">
+            <source sizes="240px" srcset="
+                      ./src/assets/chapter3-interactive2-325.avif 325w,
+                      ./src/assets/chapter3-interactive2-430.avif 430w,
+                      ./src/assets/chapter3-interactive2-530.avif 530w" type="image/avif">
+
+            <source sizes="240px" srcset="
+                      ./src/assets/chapter3-interactive2-530.jpeg 530w,
+                      ./src/assets/chapter3-interactive2-430.jpeg 430w,
+                      ./src/assets/chapter3-interactive2-325.jpeg 325w" type="image/jpeg">
+
+            <img class="chapter-three__image-2"
+              sizes="240px" srcset="
+                      ./src/assets/chapter3-interactive2-325.png 325w,
+                      ./src/assets/chapter3-interactive2-430.png 430w,
+                      ./src/assets/chapter3-interactive2-530.png 530w" src="./src/assets/chapter3-interactive2-325.png"
+              alt="Edited report is used as propaganda">
+          </picture>
+
           <p class="chapter-three__text chapter-three__text-3"> <strong class="highlight-red"> Plantin perfected his
               balancing act. </strong> He secured a
             lucrative monopoly to print
@@ -256,25 +401,80 @@
         <p class="footer__social-title"> Stay in touch</p>
 
         <a class="footer__social-link footer__social-link--facebook"
-          href="https://www.facebook.com/museumplantinmoretus/"><img
-            class="footer__social-icon footer__social-icon--facebook" src="./src/assets/footer__logo--facebook.png"
-            alt="MPM facebook icon" width="512" height="512">
+          href="https://www.facebook.com/museumplantinmoretus/">
+          <picture class="footer__social-icon footer__social-icon--facebook">
+            <source sizes="(min-width: 1520px) 640px, (min-width: 340px) calc(44.83vw - 32px), calc(-2645vw + 8575px)"
+              srcset="
+                    ./src/assets/footer__logo--facebook-325.avif 325w,
+                    ./src/assets/footer__logo--facebook-430.avif 430w,
+                    ./src/assets/footer__logo--facebook-530.avif 530w" type="image/avif">
+
+            <source sizes="(min-width: 1520px) 640px, (min-width: 340px) calc(44.83vw - 32px), calc(-2645vw + 8575px)"
+              srcset="
+                    ./src/assets/footer__logo--facebook-530.jpeg 530w,
+                    ./src/assets/footer__logo--facebook-430.jpeg 430w,
+                    ./src/assets/footer__logo--facebook-325.jpeg 325w" type="image/jpeg">
+
+            <img class="footer__social-icon footer__social-icon--facebook"
+              sizes="(min-width: 1520px) 640px, (min-width: 340px) calc(44.83vw - 32px), calc(-2645vw + 8575px)" srcset="
+                    ./src/assets/footer__logo--facebook-530.png 530w,
+                    ./src/assets/footer__logo--facebook-430.png 430w,
+                    ./src/assets/footer__logo--facebook-325.png 325w" src="./src/assets/footer__logo--facebook-325.png"
+              alt="MPM facebook logo">
+          </picture>
         </a>
 
-        <a class="footer__social-link footer__social-link--instagram"
-          href="https://www.instagram.com/plantinmoretus/"><img
-            class="footer__social-icon footer__social-icon--instagram" src="./src/assets/footer__logo--instagram.png"
-            alt="MPM instagram Iicon" width="1224" height="792">
+        <a class="footer__social-link footer__social-link--instagram" href="https://www.instagram.com/plantinmoretus/">
+
+          <picture class="footer__social-icon footer__social-icon--instagram">
+            <source sizes="(min-width: 440px) 144px, (min-width: 340px) calc(30vw + 18px), calc(-165vw + 639px)"
+              srcset="
+                      ./src/assets/footer__logo--instagram-325.avif 325w,
+                      ./src/assets/footer__logo--instagram-430.avif 430w,
+                      ./src/assets/footer__logo--instagram-530.avif 530w" type="image/avif">
+
+            <source sizes="(min-width: 440px) 144px, (min-width: 340px) calc(30vw + 18px), calc(-165vw + 639px)"
+              srcset="
+                      ./src/assets/footer__logo--instagram-530.jpeg 530w,
+                      ./src/assets/footer__logo--instagram-430.jpeg 430w,
+                      ./src/assets/footer__logo--instagram-325.jpeg 325w" type="image/jpeg">
+
+            <img class="footer__social-icon footer__social-icon--instagram"
+              sizes="(min-width: 440px) 144px, (min-width: 340px) calc(30vw + 18px), calc(-165vw + 639px)" srcset="
+                      ./src/assets/footer__logo--instagram-325.png 325w,
+                      ./src/assets/footer__logo--instagram-530.png 530w,
+                      ./src/assets/footer__logo--instagram-430.png 430w"
+              src="./src/assets/footer__logo--instagram-325.png" alt="MPM instagram logo">
+          </picture>
         </a>
 
         <a class="footer__social-link footer__social-link--tripadvisor"
-          href="https://www.tripadvisor.com/Attraction_Review-g188636-d242684-Reviews-Museum_Plantin_Moretus-Antwerp_Antwerp_Province.html"><img
-            class="footer__social-icon footer__social-icon--tripadvisor"
-            src="./src/assets/footer__logo--tripAdvisor.png" alt="MPM trip advisor icon" width="1684" height="1705">
+          href="https://www.tripadvisor.com/Attraction_Review-g188636-d242684-Reviews-Museum_Plantin_Moretus-Antwerp_Antwerp_Province.html">
+
+          <picture class="footer__social-icon footer__social-icon--tripadvisor">
+            <source sizes="(min-width: 1040px) 82px, (min-width: 340px) 135px, calc(265vw - 713px)" srcset="
+                      ./src/assets/footer__logo--tripAdvisor-325.avif 325w,
+                      ./src/assets/footer__logo--tripAdvisor-430.avif 430w,
+                      ./src/assets/footer__logo--tripAdvisor-530.avif 530w" type="image/avif">
+
+            <source sizes="(min-width: 1040px) 82px, (min-width: 340px) 135px, calc(265vw - 713px)" srcset="
+                      ./src/assets/footer__logo--tripAdvisor-530.jpeg 530w,
+                      ./src/assets/footer__logo--tripAdvisor-430.jpeg 430w,
+                      ./src/assets/footer__logo--tripAdvisor-325.jpeg 325w" type="image/jpeg">
+
+            <img class="footer__social-icon footer__social-icon--tripadvisor" sizes="(min-width: 1040px) 82px, (min-width: 340px) 135px, calc(265vw - 713px)" srcset="
+                      ./src/assets/footer__logo--tripAdvisor-325.png 325w,
+                      ./src/assets/footer__logo--tripAdvisor-430.png 430w,
+                      ./src/assets/footer__logo--tripAdvisor-530.png 530w"
+              src="./src/assets/footer__logo--tripAdvisor-325.png" alt="tripadvisor logo">
+          </picture>
         </a>
       </div>
     </footer>
   </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="./src/js/canvas.js"></script>
   <script src="./src/js/main.js"></script>
 </body>
