@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Experience the intriguing tale of Christophe Plantin's clever manoeuvring in 'The Forbidden Ink'. Delve into the world of forbidden ink and uncover the secrets behind Plantin's extraordinary story." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -15,6 +18,11 @@
   <title>Amelie Vandemoortele: The Forbidden Ink</title>
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔏</text></svg>">
+  <style>
+    .site-content {
+      visibility: hidden;
+    }
+  </style>
 </head>
 
 <body>
@@ -164,6 +172,14 @@
       <div class="canvas__wrapper">
         <canvas></canvas>
       </div>
+      <div class="chapter__interaction-colour">
+        <input type="color" class="colourpicker" name="stroke" value="#000000">
+        <input type="range" class="strokechange" id="vol" name="vol" min="1" max="10">
+        <a class="button__primary reset" href="#chapter-1"><button class="button__primary" type="button">reset</button></a>
+        <!-- <img class="reset" src="./src/assets/chapter1-finger.png" alt="brown reset button" width="70" height="34"> -->
+      </div>
+
+      <!-- <div class="site-content"> -->
       <picture class="chapter__interaction--image">
         <source sizes="128px" srcset="
             ./src/assets/chapter1-finger-325.avif 325w,
@@ -310,20 +326,17 @@
 
 
           <picture class="chapter-three__image-1">
-            <source sizes="(min-width: 600px) 288px, 240px"
-              srcset="
+            <source sizes="(min-width: 600px) 288px, 240px" srcset="
                       ./src/assets/chapter3-interactive1-325.avif 325w,
                       ./src/assets/chapter3-interactive1-430.avif 430w,
                       ./src/assets/chapter3-interactive1-530.avif 530w" type="image/avif">
 
-            <source sizes="(min-width: 600px) 288px, 240px"
-              srcset="
+            <source sizes="(min-width: 600px) 288px, 240px" srcset="
                       ./src/assets/chapter3-interactive1-530.jpeg 530w,
                       ./src/assets/chapter3-interactive1-430.jpeg 430w,
                       ./src/assets/chapter3-interactive1-325.jpeg 325w" type="image/jpeg">
 
-            <img class="chapter-three__image-1"
-              sizes="(min-width: 600px) 288px, 240px" srcset="
+            <img class="chapter-three__image-1" sizes="(min-width: 600px) 288px, 240px" srcset="
                       ./src/assets/chapter3-interactive1-325.png 325w,
                       ./src/assets/chapter3-interactive1-430.png 430w,
                       ./src/assets/chapter3-interactive1-530.png 530w" src="./src/assets/chapter3-interactive1-325.png"
@@ -351,8 +364,7 @@
                       ./src/assets/chapter3-interactive2-430.jpeg 430w,
                       ./src/assets/chapter3-interactive2-325.jpeg 325w" type="image/jpeg">
 
-            <img class="chapter-three__image-2"
-              sizes="240px" srcset="
+            <img class="chapter-three__image-2" sizes="240px" srcset="
                       ./src/assets/chapter3-interactive2-325.png 325w,
                       ./src/assets/chapter3-interactive2-430.png 430w,
                       ./src/assets/chapter3-interactive2-530.png 530w" src="./src/assets/chapter3-interactive2-325.png"
@@ -427,14 +439,12 @@
         <a class="footer__social-link footer__social-link--instagram" href="https://www.instagram.com/plantinmoretus/">
 
           <picture class="footer__social-icon footer__social-icon--instagram">
-            <source sizes="(min-width: 440px) 144px, (min-width: 340px) calc(30vw + 18px), calc(-165vw + 639px)"
-              srcset="
+            <source sizes="(min-width: 440px) 144px, (min-width: 340px) calc(30vw + 18px), calc(-165vw + 639px)" srcset="
                       ./src/assets/footer__logo--instagram-325.avif 325w,
                       ./src/assets/footer__logo--instagram-430.avif 430w,
                       ./src/assets/footer__logo--instagram-530.avif 530w" type="image/avif">
 
-            <source sizes="(min-width: 440px) 144px, (min-width: 340px) calc(30vw + 18px), calc(-165vw + 639px)"
-              srcset="
+            <source sizes="(min-width: 440px) 144px, (min-width: 340px) calc(30vw + 18px), calc(-165vw + 639px)" srcset="
                       ./src/assets/footer__logo--instagram-530.jpeg 530w,
                       ./src/assets/footer__logo--instagram-430.jpeg 430w,
                       ./src/assets/footer__logo--instagram-325.jpeg 325w" type="image/jpeg">
@@ -462,7 +472,8 @@
                       ./src/assets/footer__logo--tripAdvisor-430.jpeg 430w,
                       ./src/assets/footer__logo--tripAdvisor-325.jpeg 325w" type="image/jpeg">
 
-            <img class="footer__social-icon footer__social-icon--tripadvisor" sizes="(min-width: 1040px) 82px, (min-width: 340px) 135px, calc(265vw - 713px)" srcset="
+            <img class="footer__social-icon footer__social-icon--tripadvisor"
+              sizes="(min-width: 1040px) 82px, (min-width: 340px) 135px, calc(265vw - 713px)" srcset="
                       ./src/assets/footer__logo--tripAdvisor-325.png 325w,
                       ./src/assets/footer__logo--tripAdvisor-430.png 430w,
                       ./src/assets/footer__logo--tripAdvisor-530.png 530w"
@@ -471,6 +482,7 @@
         </a>
       </div>
     </footer>
+    <!-- </div> -->
   </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

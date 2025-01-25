@@ -21,6 +21,15 @@ body {
   --colour-highlight-red: #AC2836;
   --colour-highlight-orange: #EC8E54;
 
+  --bg-color: rgb(201, 169, 231);
+  --text-color: rgb(0, 0, 0);
+  --header-color: rgb(199, 18, 18);
+  --section-bg: rgb(255, 255, 255);
+  --button-bg: #cfdb2a;
+  --button-color: rgb(174, 18, 18);
+  --menu-bg: rgb(78, 78, 158);
+  --icon-bg: rgb(207, 51, 51);
+
   --font-size-desktop-h1: clamp(3.5rem, 2.5vw + 1rem, 4.5rem);
   /* 4rem */
   --font-size-desktop-h2: clamp(2.75rem, 1vw + 2rem, 3.25rem);
@@ -59,7 +68,6 @@ body {
 
 @supports not (font-size: clamp(1rem, 1vw, 1rem)) {
   :root {
-    /* Fallback font sizes for browsers without clamp() */
     --font-size-desktop-h1: 4rem;
     --font-size-desktop-h2: 3rem;
     --font-size-desktop-h3: 2.5rem;
@@ -76,7 +84,6 @@ body {
 
   @media screen and (min-width: 1440px) {
     :root {
-      /* Adjust larger font sizes for wide screens */
       --font-size-desktop-h1: 4.5rem;
       --font-size-desktop-h2: 3.25rem;
       --font-size-desktop-h3: 2.75rem;
@@ -93,13 +100,26 @@ body {
   }
 }
 
+/* @media screen and (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: rgb(32, 32, 32);
+    --text-color: rgb(230, 230, 230);
+    --header-color: rgb(255, 105, 105);
+    --section-bg: rgb(40, 40, 40);
+    --button-bg: #195e3f;
+    --button-color: white;
+    --menu-bg: rgb(50, 50, 110);
+    --icon-bg: rgb(160, 44, 44);
+  }
+} */
+
 h1 {
   font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   line-height: 160%;
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-desktop-h3);
 }
 
 h2 {
@@ -301,6 +321,8 @@ button {
 
 .chapter--one {
   position: relative;
+  grid-template-columns: 5rem 20rem;
+  grid-template-rows: 6rem 20rem 20rem 4rem 7rem 4rem 20rem 5rem;
   background:
     linear-gradient(rgba(242, 239, 230, 0.95), rgba(242, 239, 230, 0.95)),
     url('../assets/chapter1-man.png');
@@ -309,6 +331,11 @@ button {
   background-position: top 20% center;
   padding: 20px;
   padding: 0;
+}
+
+.chapter__interaction-colour {
+  grid-column: 2;
+  grid-row: 8;
 }
 
 .chapter__divider {
@@ -343,6 +370,10 @@ button {
   grid-column: 1;
   grid-row: 3;
   height: 14rem;
+}
+
+.chapter__content--one {
+  grid-column: 2;
 }
 
 .chapter__content--two {
@@ -385,12 +416,19 @@ button {
 }
 
 canvas {
-  /* /* background-color: var(--colour-primary); */
   border: solid var(--size-border-width) var(--colour-font-black);
-  cursor: url('../assets/hero-quil.png') 100 100, move;
-  /* width: 100%;
-  height: 100%; */
+  cursor: url('../assets/hero-quil-cursor.png')0 74, auto;
 }
+
+.chapter__interaction-colour {
+  grid-column: 2;
+  grid-row: 7;
+}
+
+/* .site-content {
+  visibility: hidden !important;
+  transition: visibility 0.3s ease;
+} */
 
 .chapter__interaction--image {
   grid-column: 2;
@@ -561,7 +599,7 @@ canvas {
 }
 
 .chapter-two__hidden {
-  display: none;
+  display: hidden;
 }
 
 .chapter-two__story {
@@ -729,11 +767,21 @@ canvas {
   }
 
   .header__hero-title {
-    width: 20rem;
+    width: 70vw;
     height: auto;
     grid-column: 1/4;
     grid-row: 1;
     justify-self: center;
+  }
+
+  .chapter--one {
+    grid-template-rows: 6rem 20rem 20rem 4rem 7rem 4rem 20rem 5rem;
+    grid-template-columns: 5rem 2 0rem;
+  }
+
+  .chapter__interaction-colour {
+    grid-column: 2;
+    grid-row: 8;
   }
 }
 
@@ -770,6 +818,14 @@ canvas {
     margin-block-start: -10rem;
   }
 
+  .header__hero-title {
+    width: 30rem;
+    height: auto;
+    grid-column: 1/4;
+    grid-row: 1;
+    justify-self: center;
+  }
+
   .header__hero-plantin {
     width: 25rem;
   }
@@ -789,7 +845,7 @@ canvas {
   }
 
   .button__container {
-    height: 10vh;
+    height: 0vh;
     margin-block-end: var(--size-box);
   }
 
@@ -805,7 +861,13 @@ canvas {
   }
 
   .chapter--one {
-    grid-template-rows: 6rem 20rem 15rem 4rem 7rem 4rem 15rem;
+    grid-template-rows: 6rem 20rem 20rem 4rem 7rem 4rem 20rem 5rem;
+    grid-template-columns: 5rem 2 0rem;
+  }
+
+  .chapter__interaction-colour {
+    grid-column: 2/4;
+    grid-row: 8;
   }
 
   .chapter__title {
@@ -859,7 +921,7 @@ canvas {
 
   .canvas {
     border: solid var(--size-border-width) var(--colour-font-black);
-    cursor: url('../assets/hero-quil.png') 100 100, move;
+    cursor: url('../assets/hero-quil-cursor.png')0 74, auto;
     width: 100%;
     height: 100%;
   }
@@ -873,6 +935,11 @@ canvas {
     grid-column: 4;
     grid-row: 7;
   }
+
+  /* .site-content {
+    visibility: hidden !important;
+    transition: visibility 0.3s ease;
+  } */
 
   .chapter--two {
     display: grid;
@@ -1070,7 +1137,17 @@ canvas {
   }
 }
 
-@media screen and (min-width: 64rem) {
+/* @media screen and (min-width: 55rem){
+  .header__menu {
+      right: -120rem;
+    }
+  
+    .header__ham-menu span {
+      right: -40rem;
+    }
+} */
+
+@media screen and (min-width: 60rem) {
   .header__logo-image {
     width: 10%;
     height: auto;
@@ -1083,20 +1160,20 @@ canvas {
   }
 
   .header__ham-menu span {
-    right: -70rem;
+    right: -60rem;
   }
 
   .header__hero-container {
     display: grid;
     grid-template-columns: 30rem 30rem 30rem;
     grid-template-rows: 10rem 12rem 12rem 12rem;
-    margin-block-start: -14rem;
-
+    margin-block-start: -21rem;
   }
 
   .header__hero-title {
-    width: 55vw;
+    width: 50rem;
     grid-column: 1/4;
+    grid-row: 2;
     justify-self: center;
   }
 
@@ -1145,11 +1222,16 @@ canvas {
   }
 
   .chapter--one {
-    grid-template-rows: 8rem 17rem 15rem 4rem 7rem 4rem 15rem;
+    grid-template-rows: 8rem 17rem 15rem 4rem 7rem 4rem 20rem 5rem;
     background-image: url('../assets/chapter1-man2.png'), url('../assets/chapter1-woman.png');
     background-size: 20%, 30%;
     background-repeat: no-repeat, no-repeat;
     background-position: top right 20%, bottom 20% left 20%;
+  }
+
+  .chapter__interaction-colour {
+    grid-column: 5/7;
+    grid-row: 8;
   }
 
   .chapter__title {
@@ -1196,9 +1278,21 @@ canvas {
     grid-row: 7;
   }
 
+  .canvas {
+    border: solid var(--size-border-width) var(--colour-font-black);
+    cursor: url('../assets/hero-quil-cursor.png')0 74, auto;
+    width: 100%;
+    height: 100%;
+  }
+
   .chapter__interaction--image {
     grid-column: 6;
     grid-row: 7;
+  }
+
+  .site-content {
+    visibility: hidden !important;
+    transition: visibility 0.3s ease;
   }
 
   .chapter--two {
@@ -1431,4 +1525,73 @@ canvas {
 .content p {
   position: relative;
   z-index: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--colour-font-black);
+    color: rgb(230, 230, 230);
+  }
+
+  h1 {
+    color: var(--colour-highlight-red);
+  }
+
+  .chapter__divider {
+    color: var(--colour-primary);
+  }
+
+  .off-screen-menu {
+    background-color: rgb(168, 98, 100);
+  }
+
+  a .off-screen-menu {
+    color: #3576bc;
+  }
+
+  a:visited {
+    color: var(--colour-highlight-orange);
+    text-decoration-color: lightpink;
+  }
+
+  .chapter--one {
+    position: relative;
+    background:
+      linear-gradient(rgba(16, 15, 12, 0.95), rgba(12, 11, 9, 0.95)),
+      url('../assets/chapter1-man.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top 20% center;
+    padding: 20px;
+    padding: 0;
+  }
+
+  .chapter__bridge {
+    background-color: #0d0d0e;
+  }
+
+  .chapter-two__letter {
+    width: var(--size-box);
+    height: var(--size-box);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #732626;
+    border: var(--size-border-width) solid #ccc;
+    border-radius: var(--size-border-radius);
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .footer-icons .icon {
+    background-color: rgb(160, 44, 44);
+  }
+
+  .ham-menu span {
+    background-color: white;
+  }
+
+  .section {
+    background-color: rgb(40, 40, 40);
+  }
 }
