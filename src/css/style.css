@@ -445,7 +445,7 @@ canvas {
   background-position: top 8% right 60%, left center;
 }
 
-.bridge{
+.bridge {
   background-color: var(--colour-primary);
 }
 
@@ -667,6 +667,9 @@ canvas {
 .chapter-three__caption {
   grid-column: 1;
   grid-row: 2;
+  writing-mode: vertical-rl;
+  font-family: var(--header-font);
+  font-size: var(--font-size-mobile-h1);
   padding-block-start: var(--spacing-20);
   justify-self: end;
 }
@@ -1381,14 +1384,33 @@ canvas {
   }
 
   .chapter--three {
-    grid-template-columns: 6rem 12.5rem 12.5rem 12.5rem;
-    grid-template-rows: 4rem 20rem 35rem 15rem 28rem 18rem;
-    padding-block-end: 8rem;
+    /* grid-template-columns: 6rem 12.5rem 12.5rem 12.5rem;
+    grid-template-rows: 4rem 20rem 35rem 15rem 28rem 18rem; */
+    /* padding-block-end: 200rem; */
+    display: flex;
+
   }
 
   .chapter-three__text-1 {
     grid-column: 2/4;
     max-width: 40ch;
+  }
+
+  .chapter-three__content {
+    display: flex;
+    flex-direction: row;
+    /* gap: 3rem; */
+    width: calc(100vw * 3);
+    height: 100%;
+
+  }
+
+  .chapter-three__content>div {
+    flex: 0 0 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .chapter-three__scroll-container-1 {
