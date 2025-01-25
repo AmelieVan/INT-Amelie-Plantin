@@ -100,18 +100,9 @@ body {
   }
 }
 
-/* @media screen and (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: rgb(32, 32, 32);
-    --text-color: rgb(230, 230, 230);
-    --header-color: rgb(255, 105, 105);
-    --section-bg: rgb(40, 40, 40);
-    --button-bg: #195e3f;
-    --button-color: white;
-    --menu-bg: rgb(50, 50, 110);
-    --icon-bg: rgb(160, 44, 44);
-  }
-} */
+.animated-element {
+  will-change: transform;
+}
 
 h1 {
   font-family: "EB Garamond", serif;
@@ -273,6 +264,7 @@ body {
   grid-row: 4;
   margin-top: -2.5rem;
   margin-inline-end: -2rem;
+  z-index: 2;
 }
 
 .header__hero-banner {
@@ -453,6 +445,10 @@ canvas {
   background-position: top 8% right 60%, left center;
 }
 
+.bridge{
+  background-color: var(--colour-primary);
+}
+
 .chapter__number--two {
   font-size: var(--font-size-number-mobile);
   grid-column: 1;
@@ -603,6 +599,9 @@ canvas {
 }
 
 .chapter-two__story {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   margin-top: var(--spacing-20);
 }
 
@@ -614,6 +613,13 @@ canvas {
 .chapter-two__story-text {
   font-size: var(--font-size-subtitle);
 }
+
+.chapter-two__story.chapter-two__visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+
 
 .chapter--three {
   display: grid;
@@ -1190,7 +1196,7 @@ canvas {
     grid-row: 3;
     grid-column: 2;
     margin-block-start: 8rem;
-    margin-inline-start: 2rem;
+    margin-inline-start: 1rem;
   }
 
   .header__hero-banner {
@@ -1368,6 +1374,12 @@ canvas {
     justify-content: flex-start;
   }
 
+  .chapter-two__drop-box--incorrect {
+    border-color: red;
+    border-width: 0.125rem;
+    transition: border-color 0.3s ease;
+  }
+
   .chapter--three {
     grid-template-columns: 6rem 12.5rem 12.5rem 12.5rem;
     grid-template-rows: 4rem 20rem 35rem 15rem 28rem 18rem;
@@ -1511,15 +1523,14 @@ canvas {
 /* Ink Drop */
 .header__ink-drop {
   position: absolute;
-  bottom: -5rem;
-  left: 25%;
+  top: 50rem;
+  left: 30%;
   /* transform: translateX(-50%); */
   width: 1rem;
   height: 1rem;
-  background-color: rgb(161, 22, 138);
+  background-color: var(--colour-bg-red);
   border-radius: 50%;
   z-index: -1;
-  mix-blend-mode: exclusion;
 }
 
 .content p {
