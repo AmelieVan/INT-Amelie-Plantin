@@ -100,10 +100,6 @@ body {
   }
 }
 
-.animated-element {
-  will-change: transform;
-}
-
 h1 {
   font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
@@ -416,11 +412,6 @@ canvas {
   grid-column: 2;
   grid-row: 7;
 }
-
-/* .site-content {
-  visibility: hidden !important;
-  transition: visibility 0.3s ease;
-} */
 
 .chapter__interaction--image {
   grid-column: 2;
@@ -765,6 +756,18 @@ canvas {
   height: auto;
 }
 
+.text-reveal {
+  opacity: 1;
+  transform: translateY(20px);
+}
+
+.header__menu-link {
+  display: block;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+}
+
 @media screen and (min-width: 20rem) {
   .header__logo-image {
     width: 30%;
@@ -795,17 +798,17 @@ canvas {
 }
 
 @media screen and (min-width: 37rem) {
-  /* Ink Drop */
-    .header__ink-drop {
-      position: absolute;
-      top: 48rem;
-      left: 36.5rem;
-      width: 1rem;
-      height: 1rem;
-      background-color: var(--colour-bg-red);
-      border-radius: 50%;
-      z-index: -1;
-    }
+  .header__ink-drop {
+    position: absolute;
+    top: 48rem;
+    left: 36.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--colour-bg-red);
+    border-radius: 50%;
+    z-index: -1;
+  }
+
   h1 {
     font-size: var(--font-size-desktop-h1);
   }
