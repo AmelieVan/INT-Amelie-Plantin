@@ -795,6 +795,17 @@ canvas {
 }
 
 @media screen and (min-width: 37rem) {
+  /* Ink Drop */
+    .header__ink-drop {
+      position: absolute;
+      top: 48rem;
+      left: 36.5rem;
+      width: 1rem;
+      height: 1rem;
+      background-color: var(--colour-bg-red);
+      border-radius: 50%;
+      z-index: -1;
+    }
   h1 {
     font-size: var(--font-size-desktop-h1);
   }
@@ -1147,6 +1158,20 @@ canvas {
 }
 
 @media screen and (min-width: 60rem) {
+
+  /* Ink Drop */
+  .header__ink-drop {
+    position: absolute;
+    top: 48rem;
+    left: 36.5rem;
+    /* transform: translateX(-50%); */
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--colour-bg-red);
+    border-radius: 50%;
+    z-index: -1;
+  }
+
   .header__logo-image {
     width: 10%;
     height: auto;
@@ -1377,7 +1402,7 @@ canvas {
     display: flex;
   }
 
-  .chapter--three .chapter__number--three{
+  .chapter--three .chapter__number--three {
     display: flex;
     /* margin: 3rem; */
   }
@@ -1527,18 +1552,7 @@ canvas {
   }
 }
 
-/* Ink Drop */
-.header__ink-drop {
-  position: absolute;
-  top: 50rem;
-  left: 30%;
-  /* transform: translateX(-50%); */
-  width: 1rem;
-  height: 1rem;
-  background-color: var(--colour-bg-red);
-  border-radius: 50%;
-  z-index: -1;
-}
+
 
 .content p {
   position: relative;

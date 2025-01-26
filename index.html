@@ -28,7 +28,7 @@
 <body>
   <header class="header">
     <a class="header__logo" href="index.html">
-      <img class="header__logo-image" src="./src/assets/mpm-logo.png" alt="museum logo" width="2175" height="2052">
+      <img class="header__logo-image" src="./src/assets/header__logo-animation.gif" alt="museum logo" width="2175" height="2052">
     </a>
     <div class="header__menu off-screen-menu">
       <ul class="header__menu-list">
@@ -47,33 +47,33 @@
     <div class="header__hero-container">
 
       <picture class="header__hero-title">
-        <source sizes="(min-width: 1520px) 640px, (min-width: 340px) calc(44.83vw - 32px), calc(-2645vw + 8575px)"
+        <source sizes="(min-width: 960px) 800px, (min-width: 600px) 480px, (min-width: 340px) 70vw, calc(320vw - 800px)"
           srcset="
                   ./src/assets/hero-title-325.avif 325w,
                   ./src/assets/hero-title-430.avif 430w,
                   ./src/assets/hero-title-530.avif 530w" type="image/avif">
 
-        <source sizes="(min-width: 1520px) 640px, (min-width: 340px) calc(44.83vw - 32px), calc(-2645vw + 8575px)"
+        <source sizes="(min-width: 960px) 800px, (min-width: 600px) 480px, (min-width: 340px) 70vw, calc(320vw - 800px)"
           srcset="
                   ./src/assets/hero-title-325.jpeg 325w,
                   ./src/assets/hero-title-430.jpeg 430w,
                   ./src/assets/hero-title-530.jpeg 530w" type="image/jpeg">
 
         <img class="header__hero-title"
-          sizes="(min-width: 1520px) 640px, (min-width: 340px) calc(44.83vw - 32px), calc(-2645vw + 8575px)" srcset="
+          sizes="(min-width: 960px) 800px, (min-width: 600px) 480px, (min-width: 340px) 70vw, calc(320vw - 800px)" srcset="
                   ./src/assets/hero-title-325.png 325w,
                   ./src/assets/hero-title-430.png 430w,
                   ./src/assets/hero-title-530.png 530w" src="./src/assets/hero-title-325.png" alt="hero title">
       </picture>
 
       <picture class="header__hero-plantin">
-        <source sizes="(min-width: 1040px) 560px, (min-width: 600px) 400px, 224px" srcset="
+        <source sizes="(min-width: 960px) 560px, (min-width: 600px) 400px, 224px" srcset="
             ./src/assets/hero-plantin-325.avif 325w,
             ./src/assets/hero-plantin-430.avif 430w,
             ./src/assets/hero-plantin-530.avif 530w,
             ./src/assets/hero-plantin-700.avif 700w" type="image/avif">
 
-        <source sizes="(min-width: 1040px) 560px, (min-width: 600px) 400px, 224px" srcset="
+        <source sizes="(min-width: 960px) 560px, (min-width: 600px) 400px, 224px" srcset="
             ./src/assets/hero-plantin-700.jpeg 700w,
             ./src/assets/hero-plantin-530.jpeg 530w,
             ./src/assets/hero-plantin-430.jpeg 430w,
@@ -142,11 +142,11 @@
   <main>
     <div class="header__ink-drop animated-element"></div>
     <section class="chapter chapter--one" id="chapter-1">
-      <span class="chapter__number">01</span>
+      <span class="chapter__number chapter__number1">01</span>
       <h1 class="chapter__title chapter__title--one">Christophe Plantin</h1>
 
-      <div class="chapter__divider chapter__divider--one"></div>
-      <p class="chapter__content chapter__content--one">In the dim glow of his Antwerp workshop, <strong
+      <div class="chapter__divider chapter__divider--one chapter__divider1"></div>
+      <p class="chapter__content chapter__content--one chapter__content1">In the dim glow of his Antwerp workshop, <strong
           class="highlight-red">Christophe Plantin</strong> sat
         hunched over a cluttered desk, a quill in hand and ink staining his fingers. The air smelled of fresh paper and
         metal—his craft’s essence. This <strong class="highlight-red"> wasn’t just a printing
@@ -155,22 +155,22 @@
         <strong class="highlight-red"> often under another’s name. </strong>
       </p>
 
-      <div class="chapter__divider chapter__divider--two"></div>
-      <p class="chapter__content chapter__content--two">By the mid-16th century, the Low Countries were a <strong
+      <div class="chapter__divider chapter__divider--two chapter__divider1"></div>
+      <p class="chapter__content chapter__content--two chapter__content1">By the mid-16th century, the Low Countries were a <strong
           class="highlight-red"> hotbed of
           religious and political chaos.</strong> Catholics battled rising
         Protestant movements, while humanists challenged old traditions. To make it as a printer in this storm, Plantin
         needed more than skill— <strong class="highlight-red">he had to be shrewd. And shrewd he was.</strong></p>
 
-      <div class="chapter__divider chapter__divider--three"></div>
-      <h2 class="chapter__interaction-title">Police, put your fingers up!</h2>
-      <p class="chapter__content chapter__interaction-content">
+      <div class="chapter__divider chapter__divider--three chapter__divider1"></div>
+      <h2 class="chapter__interaction-title chapter__content1">Police, put your fingers up!</h2>
+      <p class="chapter__content chapter__interaction-content chapter__content1">
         to make sure we can trust you, you must write out Plantin’s motto before we can reveal his secrets.</p>
-      <p class="chapter__content chapter__interaction--quote">“Labore et Constantia”</p>
-      <div class="canvas__wrapper">
+      <p class="chapter__content chapter__interaction--quote chapter__content1">“Labore et Constantia”</p>
+      <div class="canvas__wrapper chapter__content1">
         <canvas></canvas>
       </div>
-      <div class="chapter__interaction-colour">
+      <div class="chapter__interaction-colour chapter__content1">
         <input type="color" class="colourpicker" name="stroke" value="#000000">
         <input type="range" class="strokechange" id="vol" name="vol" min="1" max="10">
         <a class="button__primary reset" href="#chapter-1"><button class="button__primary"
@@ -401,7 +401,7 @@
 
     <footer class="footer">
       <a class="footer__logo" href="index.html">
-        <img class="footer__logo-img" src="./src/assets/footer__logo.png" alt="museum logo" width="2175" height="2052">
+        <img class="footer__logo-img" src="./src/assets/header__logo-image_white.gif" alt="museum logo" width="2175" height="2052">
       </a>
       <p class="footer__contact">
         <strong class="highlight-orange">Museum Plantin-Moretus </strong><br>

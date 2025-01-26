@@ -92,29 +92,39 @@
     const scrambledMotto = scrambleLetters(motto);
     showScrambledLetters(scrambledMotto);
 
-
-    const chapterSection = document.querySelector(".chapter--one");
-    const chapterNumber = document.querySelector(".chapter__number");
-    const chapterTitle = document.querySelector(".chapter__title--one");
-    const dividers = document.querySelectorAll(".chapter__divider");
-    const contentParagraphs = document.querySelectorAll(".chapter__content");
+    const chapterDivider1 = document.querySelectorAll(".chapter__divider1");
+    const chapter_content = document.querySelectorAll(".chapter__content1");
 
     const tl = gsap.timeline({ defaults: { duration: 1, ease: "power2.out" } });
 
-    tl.from(chapterSection, { opacity: 0, y: 50 })
-      .from(chapterNumber, { x: -100, opacity: 0 }, "-=0.5")
-      .from(chapterTitle, { opacity: 0, scale: 0.8 }, "-=0.3")
-      .from(dividers, { height: 0, stagger: 0.2 }, "-=0.3")
-      .from(contentParagraphs, { y: 20, opacity: 0, stagger: 0.2 }, "-=0.5");
+    tl.from(".chapter--one", { opacity: 0, y: 50 })
+      .from(".chapter__number1", { x: -100, opacity: 0 }, "-=0.05")
+      .from(".chapter__title--one", { opacity: 0, scale: 0.8 }, "-=0.03")
+      .from(chapterDivider1, { height: 0, stagger: 0.5 }, "-=0.03")
+      .from(chapter_content, { y: 20, opacity: 0, stagger: 0.5 }, "-=0.05");
 
     gsap.to(".chapter__interaction--image", {
-      y: -20,
-      duration: 0.5, 
+      x: -20,
+      duration: 1, 
       ease: "power1.inOut",
       repeat: -1,
       yoyo: true, 
       delay: 1, 
     });
+
+    gsap.from(".chapter__number--four", {
+      opacity: 0,
+      y: -50,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".chapter--four",
+        start: "top 80%",
+        end: "top 60%",
+        scrub: true,
+      },
+    });
+  
+    
     const mm = gsap.matchMedia();
     mm.add(
       {
@@ -144,12 +154,6 @@
         };
 
         if (conditions.isXs) {
-          gsap.to(".header__ink-drop", {
-            scale: 3,
-            y: "100rem",
-            scrollTrigger: inkDropAnimation,
-          });
-
           gsap.from(".header__hero-plantin", {
             x: "100%",
             opacity: 0,
@@ -173,38 +177,13 @@
             delay: 0.8,
           });
 
-          gsap.from(".chapter__title--one", {
-            x: "-100%",
-            opacity: 0,
-            duration: 1,
-            ease: "power2.out",
-            scrollTrigger: scrollTriggerConfig,
-          });
-
-          gsap.from(".chapter__divider--one, .chapter__divider--two, .chapter__divider--three", {
-            transformOrigin: "left center",
-            duration: 1.2,
-            ease: "power1.out",
-            scrollTrigger: scrollTriggerConfig,
-          });
-
-          gsap.from(".chapter__content", {
-            opacity: 0,
-            y: "50%",
-            duration: 1.2,
-            ease: "power1.out",
-            stagger: 0.2,
-            scrollTrigger: scrollTriggerConfig,
-          });
-
-
         } else if (conditions.isMd) {
           gsap.to(".header__ink-drop", {
             scale: 3,
-            y: "100rem",
+            y: "125rem",
+            x: "3rem",
             scrollTrigger: inkDropAnimation,
           });
-
           gsap.from(".header__hero-plantin", {
             x: "120%",
             opacity: 0,
@@ -228,61 +207,11 @@
             delay: 0.6,
           });
 
-
-          gsap.from(".chapter__number", {
-            y: "-150%",
-            opacity: 0,
-            duration: 1.2,
-            ease: "power2.out",
-            scrollTrigger: scrollTriggerConfig,
-          });
-
-          gsap.from(".chapter__title--one", {
-            x: "-120%",
-            opacity: 0,
-            duration: 1.8,
-            ease: "power2.out",
-            scrollTrigger: scrollTriggerConfig,
-          });
-
-          gsap.from(".chapter__divider--one, .chapter__divider--two, .chapter__divider--three", {
-            scaleX: 0,
-            transformOrigin: "left center",
-            duration: 1.5,
-            ease: "power2.out",
-            scrollTrigger: scrollTriggerConfig,
-          });
-
-          gsap.from(".chapter__content", {
-            opacity: 0,
-            y: "40%",
-            duration: 1.2,
-            ease: "power1.out",
-            stagger: 0.3,
-            scrollTrigger: scrollTriggerConfig,
-          });
-
-          gsap.from(".chapter__interaction-title", {
-            opacity: 0,
-            scale: 0.8,
-            duration: 1.5,
-            ease: "power3.out",
-            scrollTrigger: scrollTriggerConfig,
-          });
-
-          gsap.from(".chapter__interaction-content", {
-            opacity: 0,
-            y: "30%",
-            duration: 1.5,
-            ease: "power3.out",
-            scrollTrigger: scrollTriggerConfig,
-          });
-
-
         } else if (conditions.isLg) {
           gsap.to(".header__ink-drop", {
             scale: 3,
-            y: "110rem",
+            y: "125rem",
+            x: "3rem",
             scrollTrigger: inkDropAnimation,
           });
 
